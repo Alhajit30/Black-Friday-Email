@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta charset="utf-8">
+    <!-- Force Outlook to use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Responsive viewport for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <!-- Prevent auto-detection and formatting of phone numbers, dates, addresses, emails, and URLs -->
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <!-- Prevent Apple Mail from reformatting the email -->
+    <meta name="x-apple-disable-message-reformatting">
+    <!--[if !mso]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+    <!-- Outlook-specific settings for better rendering -->
+    <!--[if mso]>
+	<style>
+        /* Force Outlook to use sans-serif font for all elements */
+        * { font-family: sans-serif !important; }
+        /* Prevent Outlook from adding extra spacing around tables */
+        table { border-collapse: collapse; }
+        /* Ensure images display properly in Outlook */
+        img { -ms-interpolation-mode: bicubic; }
+    </style>
+	<noscript>
+		<xml>
+			<o:OfficeDocumentSettings>
+				<!-- Set DPI to 96 for consistent rendering across Outlook versions -->
+				<o:PixelsPerInch></o:PixelsPerInch>
+				<!-- Allow PNG images in Outlook -->
+				<o:AllowPNG/>
+			</o:OfficeDocumentSettings>
+		</xml>
+	</noscript>
+	<![endif]-->
+    <style type="text/css">
+      /* Outlines the grids, remove when sending */
+      /*table td { border: 1px solid cyan; }*/
+
+      /* ============================================
+         RESET STYLES - Normalize email rendering
+         ============================================ */
+      html,
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      body {
+        /* Improve font rendering on WebKit and Mozilla browsers */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        background-color: #ffffff !important;
+      }
+
+      .document {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      img {
+        /* Remove default image borders and improve rendering */
+        border: 0;
+        outline: none;
+        text-decoration: none;
+        /* Improve image quality in Outlook */
+        -ms-interpolation-mode: bicubic;
+      }
+
+      table {
+        /* Ensure consistent table rendering across email clients */
+        border-collapse: collapse;
+      }
+
+      table,
+      td {
+        /* Remove spacing in Outlook 2007, 2010, 2013 */
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      body,
+      table,
+      td,
+      a {
+        /* Prevent text size adjustment on mobile devices */
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        /* Reset default margins and enable word wrapping */
+        margin: 0;
+        word-break: break-word;
+      }
+
+      /* ============================================
+         iOS BLUE LINKS FIX
+         Prevent iOS from auto-styling links
+         ============================================ */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* ============================================
+         ANDROID CENTER FIX
+         Remove default Android margin
+         ============================================ */
+      div[style*="margin: 16px 0;"] {
+        margin: 0 !important;
+      }
+
+      /* ============================================
+         MEDIA QUERIES - Mobile Responsive Styles
+         ============================================ */
+      @media all and (max-width:639px) {
+        .wrapper {
+          width: 100% !important;
+        }
+
+        .container {
+          width: 100% !important;
+          min-width: 100% !important;
+          padding: 0 !important;
+        }
+
+        .row {
+          /* Add horizontal padding on mobile for better readability */
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+
+        .col-mobile {
+          width: 20px !important;
+        }
+
+        .table-between-col-mobile {
+          width: 100% !important;
+        }
+
+        .col {
+          /* Stack columns vertically on mobile */
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .col-feature {
+          /* Stack feature columns vertically on mobile */
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .mobile-center {
+          /* Center align content on mobile */
+          text-align: center !important;
+          float: none !important;
+        }
+
+        .mobile-mx-auto {
+          /* Center elements horizontally on mobile */
+          margin: 0 auto !important;
+          float: none !important;
+        }
+
+        .mobile-left {
+          text-align: center !important;
+          float: left !important;
+        }
+
+        .mobile-hide {
+          /* Hide elements on mobile devices */
+          display: none !important;
+        }
+
+        .img {
+          /* Make images responsive on mobile */
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        .ml-btn {
+          /* Full-width buttons on mobile */
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .ml-btn-container {
+          /* Full-width button containers on mobile */
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        *[class="mobileOff"] {
+          /* Hide mobile-off elements */
+          width: 0px !important;
+          display: none !important;
+        }
+
+        *[class*="mobileOn"] {
+          /* Show mobile-on elements */
+          display: block !important;
+          max-height: none !important;
+        }
+
+        .mlContentTable {
+          /* Full-width content tables on mobile */
+          width: 100% !important;
+          min-width: 10% !important;
+          margin: 0 !important;
+          float: none !important;
+        }
+
+        .mlContentButton a {
+          /* Full-width button links on mobile */
+          display: block !important;
+          width: auto !important;
+        }
+
+        .mlContentOuter {
+          /* Adjust padding for mobile content */
+          padding-bottom: 0px !important;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          padding-top: 0px !important;
+        }
+
+        .mlContentSurvey {
+          /* Full-width survey elements on mobile */
+          float: none !important;
+          margin-bottom: 10px !important;
+          width: 100% !important;
+        }
+
+        .multiple-choice-item-table {
+          /* Full-width multiple choice items on mobile */
+          width: 100% !important;
+          min-width: 10% !important;
+          float: none !important;
+        }
+
+        .ml-default,
+        .ml-card,
+        .ml-fullwidth {
+          /* Full-width layout elements on mobile */
+          width: 100%;
+          min-width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .col-feature {
+          /* Add spacing between stacked feature columns */
+          margin-bottom: 30px;
+        }
+      }
+
+      /* ============================================
+         OUTLOOK.COM SPECIFIC FIXES
+         Target WebKit and non-WebKit rendering
+         ============================================ */
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .webkit {
+          /* Show WebKit-specific content */
+          display: block !important;
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .non-webkit {
+          /* Hide non-WebKit content in WebKit browsers */
+          display: none !important;
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        /* TARGET OUTLOOK.COM - Force display of non-webkit content */
+        [class="x_non-webkit"] {
+          display: block !important;
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        /* TARGET OUTLOOK.COM - Hide webkit content */
+        [class="x_webkit"] {
+          display: none !important;
+        }
+      }
+    </style>
+    <!-- Import custom web fonts -->
+    <style type="text/css">
+      @import url("https://assets.mlcdn.com/fonts-v2.css?version=1745332");
+    </style>
+    <!-- Set default font family for screen rendering -->
+    <style type="text/css">
+      @media screen {
+        body {
+          font-family: 'Inter', sans-serif;
+        }
+      }
+    </style>
+    <!-- Prevent search engines from indexing this email -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>test</title>
+    <!-- Open Graph image for social sharing -->
+    <meta name="image" content="https://storage.mlcdn.com/account_image/189/lwW94yzkabrt23BSl99bQDfL6uEJiLpJFikf2ZJD.png" property="og:image">
+  </head>
+      <body style="margin: 0 !important; padding: 0 !important; background-color: #ffffff !important;">
+    <!-- Main email container with accessibility attributes -->
+    <div class="document" role="article" aria-roledescription="email" aria-label lang dir="ltr" style="background-color:#ffffff; line-height: 100%; font-size:medium; font-size:max(16px, 1rem);">
+    <!-- Outlook 2007+ background color support -->
+    <!--[if gte mso 9]>
+        <v:background
+          xmlns:v="urn:schemas-microsoft-com:vml" fill="t" if="variable.bodyBackgroundImage.value">
+          <v:fill type="tile" src="" color="#ffffff"/>
+        </v:background>
+        <![endif]-->
+      <!-- Main wrapper table - 100% width for full email client support -->
+      <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class background bgcolor="#ffffff" align="center" valign="top" style="padding: 0 8px;">
+            <!-- Container table - max 640px for optimal email width -->
+            <table class="container" align="center" width="640" cellpadding="0" cellspacing="0" border="0" style="max-width: 640px;">
+              <tr>
+                <td align="center">
+                  <!-- Preheader and view in browser section -->
+                  <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <!-- Top spacing -->
+                      <td colspan="2" height="20" style="line-height: 20px"></td>
+                    </tr>
+                    <tr>
+                      <!-- Preheader text - hidden in email but visible in preview pane -->
+                      <td style="font-family: 'Playfair Display', serif; font-size:0px;color:#DFB8B8;line-height:0px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">
+                        <div style="display:none;font-size:0px;color:#DFB8B8;line-height:0px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">  test </div>
+                      </td>
+                      <!-- View in browser link -->
+                      <td align="right" style="font-family: 'Playfair Display', serif; color: #111111; font-size: 12px; line-height: 18px;">
+                        <a style="color: #111111; font-weight: normal; font-style: normal; text-decoration: underline;" href>View in browser</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- Bottom spacing -->
+                      <td colspan="2" height="20" style="line-height: 20px;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- Main content wrapper with rounded corners -->
+            <table width="640" class="wrapper" align="center" border="0" cellpadding="0" cellspacing="0" style="
+                        max-width: 640px;
+
+                        border-radius:2px; border-collapse: separate!important; overflow: hidden;
+                        ">
+              <tr>
+                <td align="center">
+                  <!-- Black Friday announcement banner -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+                        <table class="container ml-4 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #dedede; width: 640px; min-width: 640px;">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="40" style="line-height: 40px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Banner content with rounded corners -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate!important; border-radius: 2px;">
+                                <tr>
+                                  <!-- Black Friday message with dark background -->
+                                  <td class="row" valign="middle" bgcolor="#00000" style="padding: 10px 30px; border: 0px solid #dceded; border-radius: 2px;">
+                                    <p style="font-family: 'Manrope', sans-serif; color: #FFFFFF; font-size: 16px; line-height: 165%; margin-top: 0; margin-bottom: 0; text-align: center;">
+                                      <strong>P.S.</strong> Black Friday starts now — your biggest savings ever!
+                                    </p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End Black Friday banner -->
+                  <!-- Logo section -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-6 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="30" style="line-height: 30px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <!-- Company logo - left aligned -->
+                                  <td class="row" align="left" style="padding: 0 50px;">
+                                   <img src="https://i.ibb.co/wNSSgL7C/blackblaze.png" alt="blackblaze" border="0" border="0" alt width="175" class="logo" style="max-width: 175px; display: inline-block;">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="30" style="line-height: 30px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End logo section -->
+                  <!-- Decorative divider line -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-8 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="20" style="line-height: 20px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td class="row" style="padding: 0 50px;" align="center">
+                                    <!-- Dotted horizontal line separator -->
+                                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+                                      <tr>
+                                        <td style="border-top: 2px dotted #385A4F;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End divider -->
+                  <!-- Main headline section -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+                        <table class="container ml-10 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #000000; width: 640px; min-width: 640px;">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="20" style="line-height: 20px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Main headline - large serif font -->
+                              <h1 style="font-family: 'Playfair Display', serif; color: #000000; font-size: 48px; line-height: 125%; font-weight: normal; font-style: normal; text-decoration: none; ;margin-bottom: 10px; margin-bottom: 0;">Check out our latest products!</h1>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End headline -->
+                  <!-- Product images row 1 - Two column layout -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-12 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="20" style="line-height: 20px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td class="row" align="center" valign="top" style="padding: 0 50px;">
+                                    <!-- Two column product grid -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <!-- Product image 1 - Smartphone -->
+                                        <td class="col" align="center" valign="top" style="line-height: 0;" width="270">
+                                          <a href target="_self" style="text-decoration: none;">
+                                            <img src="https://i.ibb.co/5WmQV8DR/pexels-noah-erickson-97554-404280.jpg" alt="product-1" class="img" width="270" height="270" style="display: block;" border="0">
+                                          </a>
+                                        </td>
+                                        <!-- Spacer column for desktop view -->
+                                        <td class="col" width="0" height="0" style="line-height: 0px;"></td>
+                                        <!-- Product image 2 - Smartwatch -->
+                                        <td class="col" align="center" valign="top" style="line-height: 0;" width="270">
+                                          <a href target="_self" style="text-decoration: none;">
+                                            <img src="https://i.ibb.co/T9vBb6f/pexels-tdcat-437038.jpg" class="img" width="270" height="270" style="display: block;" border="0">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End product images row 1 -->
+                  <!-- Product images row 2 - Two column layout -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-14 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td class="row" align="center" valign="top" style="padding: 0 50px;">
+                                    <!-- Two column product grid -->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <!-- Product image 3 - Drone -->
+                                        <td class="col" align="center" valign="top" style="line-height: 0;" width="270">
+                                          <a href target="_self" style="text-decoration: none;">
+                                            <img src="https://i.ibb.co/Gfqckdhk/pexels-darrel-und-217939-1087180.jpg" class="img" width="270" height="270" style="display: block;" border="0">
+                                          </a>
+                                        </td>
+                                        <!-- Spacer column for desktop view -->
+                                        <td class="col" width="0" height="0" style="line-height: 0px;"></td>
+                                        <!-- Product image 4 - Robot vacuum -->
+                                        <td class="col" align="center" valign="top" style="line-height: 0;" width="270">
+                                          <a href target="_self" style="text-decoration: none;">
+                                            <img src="https://i.ibb.co/RpQcM5YM/dreame-vacuum-cleaner-PPOKwxq-WOY0-unsplash.jpg" class="img" width="270" height="270" style="display: block;" border="0">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="40" style="line-height: 40px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End product images row 2 -->
+                  <!-- Product description section -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+                        <table class="container ml-16 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #000000; width: 640px; min-width: 640px;">
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Section subheading -->
+                              <h3 style="font-family: 'Playfair Display', serif; color: #000000; font-size: 24px; line-height: 165%; font-weight: bold; font-style: normal; text-decoration: none; ;margin-bottom: 8px;">Meet the Gadgets That Do It All<br>
+                              </h3>
+                              <!-- Product description paragraph 1 -->
+                              <p style="font-family: 'Manrope', sans-serif; color: #000000; font-size: 16px; line-height: 165%; margin-top: 0; margin-bottom: 10px;">Step into the future with our latest lineup of smart devices designed to simplify your life and elevate your everyday. From sleek smartphones and powerful smartwatches to drones that capture stunning perspectives and robotic vacuums that keep your home spotless — these gadgets are built to work seamlessly together, so you can focus on what matters most.</p>
+                              <p style="font-family: 'Manrope', sans-serif; color: #000000; font-size: 16px; line-height: 165%; margin-top: 0; margin-bottom: 0;">Whether you’re upgrading your tech or discovering new essentials, this collection delivers innovation, style, and convenience in one package. Explore the possibilities, embrace smarter living, and see how these must‑have gadgets can transform your world today.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="10" style="line-height: 10px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Empty placeholder section -->
+                  <!-- Two column empty divs section -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-18 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="20" style="line-height: 20px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Two column layout with empty divs -->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <!-- Left column placeholder -->
+                                  <td class="col" width="250" valign="top">
+                                    <div class="ml-19" style="text-align:full;"></div>
+                                  </td>
+                                  <!-- Spacer column -->
+                                  <td class="col" width="40" height="20" style="line-height: 20px;"></td>
+                                  <!-- Right column placeholder -->
+                                  <td class="col" width="250" valign="top">
+                                    <div class="ml-20" style="text-align:full;"></div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End empty placeholder -->
+                  <!-- Decorative divider line with larger spacing -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-22 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing - larger for section break -->
+                            <td class="ml-default-border container" height="40" style="line-height: 40px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td class="row" style="padding: 0 50px;" align="center">
+                                    <!-- Dotted horizontal line separator -->
+                                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+                                      <tr>
+                                        <td style="border-top: 2px dotted #385A4F;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing - larger for section break -->
+                            <td height="40" style="line-height: 40px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End divider -->
+                  <!-- Secondary headline section -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+                        <table class="container ml-24 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #000000; width: 640px; min-width: 640px;">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="10" style="line-height: 10px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Secondary headline - large serif font -->
+                              <h2 style="font-family: 'Playfair Display', serif; color: #000000; font-size: 42px; line-height: 125%; font-weight: normal; font-style: normal; text-decoration: none; ;margin-bottom: 10px; margin-bottom: 0;">See what else we got...</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End secondary headline -->
+                  <!-- Store locations link section -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-26 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="30" style="line-height: 30px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Link list table -->
+                              <table width="100%" role="presentation" cellpadding="0" cellspacing="0" border="0" class="ml-link-26">
+                               <!-- Empty row placeholder -->
+                                <tr>
+
+                                </tr>
+
+                                <tr>
+                                  <!-- Store locations link with underline separator -->
+                                  <td align="left">
+                                    <a href target="blank" style="display: block; font-family: Helvetica, sans-serif; font-size: 16px; line-height: 125%; color: #385A4F; text-align: left; font-weight: normal; font-style: normal; text-decoration: underline;">
+                                      <span style="color: #000000;">STORE LOCATIONS</span>
+                                    </a>
+                                    <!-- Separator line below link -->
+                                    <table cellpadding="0" cellspacing="0" border="0" align="left" width="100%" if="!$last">
+                                      <tr>
+                                        <td height="20" style="line-height: 20px;"></td>
+                                      </tr>
+                                      <tr>
+                                        <td height="20" style="line-height: 20px; border-top: 2px solid #385A4F;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="40" style="line-height: 40px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End store locations link -->
+                  <!-- Featured product image - Audio equipment -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-32 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="20" style="line-height: 20px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                  <!-- Large featured product image - Audio equipment -->
+                                  <td class="row" style="padding: 0 50px; line-height: 1;" align="center">
+                                    <img src="https://i.ibb.co/4RjGPfmw/audio.jpg"  border="0"  width="540" height="540" class="img" style="display: block;">
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End featured product image -->
+                  <!--  -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+                        <table class="container ml-34 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #000000; width: 640px; min-width: 640px;">
+                          <tr>
+                            <td class="ml-default-border container" height="20" style="line-height: 20px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row mobile-center" align="left" style="padding: 0 50px;">
+                              <table class="ml-34 wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" style="color: #000000; text-align: left;">
+                                <tr>
+                                  <td class="mobile-center">
+                                    <p style="font-family: 'Manrope', sans-serif; color: #000000; font-size: 16px; line-height: 165%; margin-top: 0; margin-bottom: 10px;">We’re excited to bring you the latest innovations designed to make everyday life smarter, easier, and more connected. Whether you’re looking to streamline your routine, capture new perspectives, or simply enjoy the convenience of cutting‑edge technology, our collection has something for everyone.</p>
+                                    <p style="font-family: 'Manrope', sans-serif; color: #000000; font-size: 16px; line-height: 165%; margin-top: 0; margin-bottom: 10px;">Don’t wait to experience the future — explore our full lineup today and see how these gadgets can transform the way you live, work, and play. Visit us online or stop by one of our store locations to get hands‑on with the products that are redefining modern living.</p>
+                                    <p style="font-family: 'Manrope', sans-serif; color: #000000; font-size: 16px; line-height: 165%; margin-top: 0; margin-bottom: 0;"> Founder, <br>
+                                      <strong>Ethan Caldwell</strong>
+                                    </p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="10" style="line-height: 10px;"></td>
+                                </tr>
+                                <tr>
+                                  <td class="mobile-center" style="line-height: 0;">
+                                    
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td height="40" style="line-height: 40px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Decorative divider line -->
+                  <!-- Footer divider -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-36 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="10" style="line-height: 10px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td class="row" style="padding: 0 50px;" align="center">
+                                    <!-- Dotted horizontal line separator -->
+                                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+                                      <tr>
+                                        <td style="border-top: 2px dotted #385A4F;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="20" style="line-height: 20px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End divider -->
+                  <!-- Footer section with social links and unsubscribe -->
+                  <table class="ml-default" width="100%" bgcolor border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style>
+      <table class="container ml-38 ml-default-border" width="640" bgcolor="#dedede" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 640px; min-width: 640px;
+                ;
+
+                ">
+                          <tr>
+                            <!-- Top spacing -->
+                            <td class="ml-default-border container" height="30" style="line-height: 30px; min-width: 640px;"></td>
+                          </tr>
+                          <tr>
+                            <td class="row" style="padding: 0 50px;">
+                              <!-- Two column footer layout -->
+                              <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <!-- Left column: Brand name and social media icons -->
+                                  <td class="col" align="left" width="250" valign="top" style="text-align: left!important;">
+                                    <!-- Brand name -->
+                                    <h5 style="font-family: 'Playfair Display', serif; color: #000000; font-size: 15px; line-height: 125%; font-weight: bold; font-style: normal; text-decoration: none; margin-bottom: 6px;">BLACKBLAZE</h5>
+
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                      <tr>
+                                        <!-- Spacing before social icons -->
+                                        <td height="16" style="line-height: 16px;"></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <!-- Social media icons row -->
+                                          <table class="**$class**" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                              <!-- Facebook icon -->
+                                              <td align="center" valign="middle" width="18" ng-show="slink.link != ''" style="padding: 0 5px 0 0;">
+                                                <a href="https://" target="blank" style="text-decoration: none;">
+                                                  <img src="https://assets.mlcdn.com/ml/images/icons/default/rounded_corners/black/facebook.png" width="28" alt="facebook">
+                                                </a>
+                                              </td>
+                                              <!-- X (Twitter) icon -->
+                                              <td align="center" valign="middle" width="18" ng-show="slink.link != ''" style="padding: 0 5px;">
+                                                <a href="https://" target="blank" style="text-decoration: none;">
+                                                  <img src="https://assets.mlcdn.com/ml/images/icons/default/rounded_corners/black/x.png" width="28" alt="x">
+                                                </a>
+                                              </td>
+                                              <!-- Instagram icon -->
+                                              <td align="center" valign="middle" width="18" ng-show="slink.link != ''" style="padding: 0 0 0 5px;">
+                                                <a href="https://" target="blank" style="text-decoration: none;">
+                                                  <img src="https://assets.mlcdn.com/ml/images/icons/default/rounded_corners/black/instagram.png" width="28" alt="instagram">
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <!-- Spacer column -->
+                                  <td class="col" width="40" height="30" style="line-height: 30px;"></td>
+                                  <!-- Right column: Email disclaimer and unsubscribe link -->
+                                  <td class="col" align="left" width="250" valign="top" style="text-align: left!important;">
+                                    <!-- Email disclaimer text -->
+                                    <p style="font-family: 'Playfair Display', serif; color: #515856; font-size: 14px; line-height: 150%; margin-bottom: 6px;">You received this email because you signed up on our website or made a purchase from us.</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                      <tr>
+                                        <!-- Spacing before unsubscribe link -->
+                                        <td height="8" style="line-height: 8px;"></td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left">
+                                          <!-- Unsubscribe link -->
+                                          <p style="font-family: 'Playfair Display', serif; color: #515856; font-size: 14px; line-height: 150%; margin-bottom: 0;">
+                                            <a href style="color: #515856; font-weight: normal; font-style: normal; text-decoration: underline;">Unsubscribe</a>
+                                          </p>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Bottom spacing -->
+                            <td height="40" style="line-height: 40px;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End footer -->
+                </td>
+              </tr>
+            </table>
+            <!-- Empty spacer table for additional spacing if needed -->
+            <table cellpadding="0" cellspacing="0" border="0" align="center" width="640" style="max-width: 640px; width: 100%;"></table>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- End email document -->
+  </body>
+</html>
